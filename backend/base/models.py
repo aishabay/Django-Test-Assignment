@@ -15,12 +15,10 @@ class Category(models.Model):
 class News(models.Model):
     POPULARITY_LEVEL_1 = 1
     POPULARITY_LEVEL_2 = 2
-    # POPULARITY_LEVEL_3 = 3
 
     POPULARITY_LEVEL_CHOICES = [
         (POPULARITY_LEVEL_1, 1),
         (POPULARITY_LEVEL_2, 2),
-        # (POPULARITY_LEVEL_3, 3),
     ]
 
     headline = models.CharField(max_length=200, blank=False)

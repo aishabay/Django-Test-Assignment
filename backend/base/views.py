@@ -71,12 +71,3 @@ def getNews(request):
     news = News.objects.all()
     serializer = NewsSerializer(news, many=True)
     return Response(serializer.data)
-
-
-@api_view(["GET"])
-@permission_classes([AllowAny])
-def getTheMostPopularNews(request):
-    # news = News.objects.filter(popularity_level=1).order_by('-createdAt')[:1]
-    news = News.objects.filter(popularity_level=2).order_by('-createdAt')[:6]
-    serializer = NewsSerializer(news, many=True)
-    return Response(serializer.data)
