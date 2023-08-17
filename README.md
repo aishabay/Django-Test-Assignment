@@ -15,6 +15,8 @@ python manage.py runserver
 ```
 ## Installation to run using docker
 
+### Make sure you have Docker Desktop installed and running on your computer
+
 To build and start container:
 ```bash
 docker-compose up -d --build
